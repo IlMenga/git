@@ -2366,6 +2366,7 @@ int setup_revisions(int argc, const char **argv, struct rev_info *revs, struct s
 				}
 				if (read_from_stdin++)
 					die("--stdin given twice?");
+				revs->read_from_stdin = 1;
 				read_revisions_from_stdin(revs, &prune_data);
 				continue;
 			}
